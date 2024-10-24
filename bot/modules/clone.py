@@ -115,11 +115,11 @@ async def rcloneNode(client, message, link, dst_path, rcf, listener):
         await delete_links(message)
         return
     LOGGER.info(f'Cloning Done: {name}')
-    cmd1 = ['rclone', 'lsf', '--fast-list', '-R',
+    cmd1 = ['xone', 'lsf', '--fast-list', '-R',
             '--files-only', '--config', config_path, destination]
-    cmd2 = ['rclone', 'lsf', '--fast-list', '-R',
+    cmd2 = ['xone', 'lsf', '--fast-list', '-R',
             '--dirs-only', '--config', config_path, destination]
-    cmd3 = ['rclone', 'size', '--fast-list', '--json',
+    cmd3 = ['xon3', 'size', '--fast-list', '--json',
             '--config', config_path, destination]
     res1, res2, res3 = await gather(cmd_exec(cmd1), cmd_exec(cmd2), cmd_exec(cmd3))
     if res1[2] != res2[2] != res3[2] != 0:

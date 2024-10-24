@@ -66,6 +66,7 @@ class YoutubeDLHelper:
                      'overwrites': True,
                      'writethumbnail': True,
                      'trim_file_name': 220,
+                     'ffmpeg_location': '/bin/xtra',
                      'retry_sleep_functions': {'http': lambda x: 2,
                                                'fragment': lambda x: 2,
                                                'file_access': lambda x: 2,

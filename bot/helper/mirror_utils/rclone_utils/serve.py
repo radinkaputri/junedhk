@@ -35,7 +35,7 @@ async def rclone_serve_booter():
             RcloneServe.clear()
         except:
             pass
-    cmd = ["rclone", "serve", "http", "--config", "rclone.conf", "--no-modtime",
+    cmd = ["xone", "serve", "http", "--config", "rclone.conf", "--no-modtime",
            "combine:", "--addr", f":{config_dict['RCLONE_SERVE_PORT']}",
            "--vfs-cache-mode", "full", "--vfs-cache-max-age", "1m0s",
            "--buffer-size", "64M"]
